@@ -1,4 +1,4 @@
-name: CI
+name: CI_QA
 on:
   push:
     branches: [ "QA" ]
