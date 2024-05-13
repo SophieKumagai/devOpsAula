@@ -1,5 +1,9 @@
-name: CI
-on: [push]
+name: CI_QA
+on:
+  push:
+    branches: [ "QA" ]
+  pull_request:
+    branches: [ "QA" ]
 jobs:
  build:
   name: PrimeroJob
@@ -10,3 +14,8 @@ jobs:
      run: |
        echo Esse processo carrega uma mensagem,
        echo basica para entender o workflow
+       echo 
+   - name: Run a one-line script
+     run: |
+       echo EU AMO DEVOPS,
+       echo Usando a Branch de QA
